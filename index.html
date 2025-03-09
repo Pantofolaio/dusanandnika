@@ -8,53 +8,53 @@
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f8f5f2;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
         }
         .container {
             max-width: 600px;
             margin: 50px auto;
-            background: #fff;
             padding: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #d63384;
+            color: #c49a6c;
         }
         .details {
             font-size: 18px;
-            color: #333;
-        }
-        .qr-code {
             margin-top: 20px;
         }
-        img {
-            width: 150px;
-            height: 150px;
+        .rsvp {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
         }
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px;
-                padding: 15px;
-            }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>You Are Invited!</h1>
-        <p class="details">Join us in celebrating the wedding of <strong>[insert_names]</strong></p>
-        <p class="details">Date: <strong>June 14, 2025</strong></p>
-        <p class="details">Time: <strong>17:30</strong></p>
-        <p class="details">Location: <strong>[insert_location]</strong></p>
+        <h1>You're Invited!</h1>
+        <p class="details">Join us in celebrating the wedding of <strong>[insert_couple_names]</strong></p>
+        <p class="details">Date: <strong>[insert_date]</strong></p>
+        <p class="details">Time: <strong>[insert_time]</strong></p>
+        <p class="details">Venue: <strong>[insert_location]</strong></p>
         <p class="details">Dress Code: <strong>[insert_dress_code]</strong></p>
-        <div class="qr-code">
+        <p class="details">Additional Notes: <strong>[insert_any_other_details]</strong></p>
+        <div class="calendar-link">
             <p>Save the date to your calendar:</p>
-            <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding&dates=20250614T173000Z/20250614T213000Z&details=Join%20us%20for%20our%20special%20day!&location=[insert_location]" alt="Google Calendar QR Code">
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding&dates=20250614T173000Z/20250614T213000Z&details=Join%20us%20for%20our%20special%20day!&location=[insert_location]" target="_blank">Add to Google Calendar</a>
         </div>
-        <p class="details">We can't wait to celebrate with you! 💕</p>
+        <p class="rsvp">Please RSVP by <strong>[insert_rsvp_deadline]</strong> at <a href="mailto:[insert_email]">[insert_email]</a></p>
+        <p class="footer">We can't wait to celebrate with you! ❤️</p>
     </div>
 </body>
 </html>
