@@ -43,7 +43,7 @@
 <body>
     <div class="container">
         <h1>You're Invited!</h1>
-        <p class="details">Join us in celebrating the wedding of <strong>[insert_couple_names]</strong></p>
+        <p class="details">Join us in celebrating the wedding of <strong id="couple-names">[insert_couple_names]</strong></p>
         <p class="details">Date: <strong>[insert_date]</strong></p>
         <p class="details">Time: <strong>[insert_time]</strong></p>
         <p class="details">Venue: <strong>[insert_location]</strong></p>
@@ -56,5 +56,17 @@
         <p class="rsvp">Please RSVP by <strong>[insert_rsvp_deadline]</strong> at <a href="mailto:[insert_email]">[insert_email]</a></p>
         <p class="footer">We can't wait to celebrate with you! ❤️</p>
     </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) ? decodeURIComponent(urlParams.get(param)) : null;
+        }
+
+        const coupleNames = getQueryParam("name");
+        if (coupleNames) {
+            document.getElementById("couple-names").textContent = coupleNames;
+        }
+    </script>
 </body>
 </html>
