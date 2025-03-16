@@ -43,18 +43,15 @@
 <body>
     <div class="container">
         <h1 id="couple-names">[insert_couple_names]</h1>
-        <p class="details">Vabljen_a, da prisostvuješ_ta na najinem poročnem obredu in z nama proslaviš_te pozno v noč.</p>
-        <p class="details">Date: <strong>[insert_date]</strong></p>
-        <p class="details">Time: <strong>[insert_time]</strong></p>
-        <p class="details">Venue: <strong>[insert_location]</strong></p>
-        <p class="details">Dress Code: <strong>[insert_dress_code]</strong></p>
-        <p class="details">Additional Notes: <strong>[insert_any_other_details]</strong></p>
+        <p class="details">Vabiva <span id="te">te</span>, da se nama pridružiš na najinem poročnem obredu in z nama proslaviš pozno v noč.</p>
+        <p class="details">&#128197; <strong>14. 6. 2025</strong></p>
+        <p class="details">&#128340; <strong>17:00</strong></p>
+        <p class="details">&#x1F4CD; <strong>Grič pri Klevevžu</strong></p>
+        
         <div class="calendar-link">
             <p>Save the date to your calendar:</p>
             <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding&dates=20250614T143000Z/20250615T030000Z&details=Join%20us%20for%20our%20special%20day!&location=[insert_location]" target="_blank">Add to Google Calendar</a>
         </div>
-        <p class="rsvp">Please RSVP by <strong>[insert_rsvp_deadline]</strong> at <a href="mailto:[insert_email]">[insert_email]</a></p>
-        <p class="footer">We can't wait to celebrate with you! ❤️</p>
     </div>
 
     <script>
@@ -67,6 +64,19 @@
         if (coupleNames) {
             document.getElementById("couple-names").textContent = "Draga " + coupleNames;
         }
+        
+        const gc = getQueryParam("gc");
+        if (gc=1) {
+            //document.getElementById("dragi").textContent = "Draga " + coupleNames;
+            document.getElementById("te").textContent = "te" + coupleNames;
+        } else if (gc=2) {
+            document.getElementById("te").textContent = "vaju" + coupleNames;
+        }
+        //moški: DragI, TE, pridružiŠ, proslaviŠ, potrdiŠ, želel, sporočiŠ, TVOJI
+        //Ženska: DragA, TE, pridružiŠ, proslaviŠ, potrdiŠ, želelA, sporočiŠ, TVOJI
+        //Par: DragA, VAJU, pridružiTA, potrdiTA, želelA, sporočiTA, VAJINI
+
+        //Vabiva te, da se nama pridružiš na najinem poročnem obredu in z nama proslaviš pozno v noč 
     </script>
 </body>
 </html>
