@@ -66,6 +66,26 @@
             font-size: 14px;
             color: #777;
         }
+
+        /* Mobile-specific styles */
+        @media (max-width: 600px) {
+            body {
+                /* Change background settings for mobile */
+                background-position: center center;
+                background-size: contain;
+            }
+            .container{
+                margin: 10px auto; /* example change of margin */
+                padding: 10px; /* example change of padding */
+            }
+            h1{
+                font-size: 30px; /* example change of font size */
+            }
+            .details_text{
+                font-size: 16px; /* example change of font size */
+            }
+        }
+        
     </style>
 </head>
 <body>
