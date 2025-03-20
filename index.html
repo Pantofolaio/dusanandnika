@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="dragi">Dragi</h1><h1>&nbsp;</h1><h1 id="couple-names">[insert_couple_names]</h1>
+        <h1 id="couple-names">[insert_couple_names]</h1>
         <br>
         
         <p class="details_text">Vabiva <span id="te">te</span>, da se nama <span id="pridruzis">pridružiš</span> na najinem poročnem obredu in z nama <span id="proslavis">proslaviš</span> pozno v noč.</p>
@@ -98,8 +98,12 @@
         }
         
         const gc = getQueryParam("gc");
+        if (gc=="0") {
+            document.getElementById("couple-names").textContent = "Dragi " + coupleNames;
+        }
         if (gc=="1") {
-            document.getElementById("dragi").textContent = "Draga";
+            /*document.getElementById("dragi").textContent = "Draga";*/
+            document.getElementById("couple-names").textContent = "Draga " + coupleNames;
             document.getElementById("te").textContent = "te";
             document.getElementById("pridruzis").textContent = "pridružiš";
             document.getElementById("proslavis").textContent = "proslaviš";
@@ -107,7 +111,8 @@
             document.getElementById("sporoci").textContent = "sporoči";
             document.getElementById("tvoji").textContent = "tvoji";
         } else if (gc=="2") {
-            document.getElementById("dragi").textContent = "Draga";
+            /*document.getElementById("dragi").textContent = "Draga";*/
+            document.getElementById("couple-names").textContent = "Draga " + coupleNames;
             document.getElementById("te").textContent = "vaju";
             document.getElementById("pridruzis").textContent = "pridružita";
             document.getElementById("proslavis").textContent = "proslavita";
