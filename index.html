@@ -164,7 +164,6 @@
             document.getElementById("couple-names").textContent = "Dragi " + coupleNames;
         }
         if (gc=="1") {
-            /*document.getElementById("dragi").textContent = "Draga";*/
             document.getElementById("couple-names").textContent = "Draga " + coupleNames;
             document.getElementById("te").textContent = "te";
             document.getElementById("pridruzis").textContent = "pridružiš";
@@ -173,7 +172,6 @@
             document.getElementById("sporoci").textContent = "sporoči";
             document.getElementById("tvoji").textContent = "tvoji";
         } else if (gc=="2") {
-            /*document.getElementById("dragi").textContent = "Draga";*/
             document.getElementById("couple-names").innerHTML = "Draga<br>" + coupleNames;
             document.getElementById("te").textContent = "vaju";
             document.getElementById("pridruzis").textContent = "pridružita";
@@ -181,12 +179,15 @@
             document.getElementById("potrdis").textContent = "potrdita";
             document.getElementById("sporoci").textContent = "sporočita";
             document.getElementById("tvoji").textContent = "vajini";
+        } else if (gc=="3") {
+            document.getElementById("couple-names").innerHTML = "Draga družina<br>" + coupleNames;
+            document.getElementById("te").textContent = "vas";
+            document.getElementById("pridruzis").textContent = "pridružite";
+            document.getElementById("proslavis").textContent = "proslavite";
+            document.getElementById("potrdis").textContent = "potrdite";
+            document.getElementById("sporoci").textContent = "sporočite";
+            document.getElementById("tvoji").textContent = "vaši";
         }
-        //moški: DragI, TE, pridružiŠ, proslaviŠ, potrdiŠ, želel, sporočiŠ, TVOJI
-        //Ženska: DragA, TE, pridružiŠ, proslaviŠ, potrdiŠ, želelA, sporočiŠ, TVOJI
-        //Par: DragA, VAJU, pridružiTA, potrdiTA, želelA, sporočiTA, VAJINI
-
-        //Vabiva te, da se nama pridružiš na najinem poročnem obredu in z nama proslaviš pozno v noč 
     </script>
 </body>
 </html>
